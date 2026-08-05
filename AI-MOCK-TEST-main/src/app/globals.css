@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 217 39% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 217 39% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 39% 11%;
+    --primary: 215 90% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 95% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 10% 80%;
+    --muted-foreground: 217 10% 40%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 20% 90%;
+    --input: 210 20% 95%;
+    --ring: 215 90% 45%;
+    --radius: 0.5rem;
+
+    --chart-1: 215 90% 45%;
+    --chart-2: 38 92% 50%;
+    --chart-3: 240 71% 60%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    --sidebar-background: 210 40% 98%;
+    --sidebar-foreground: 217 39% 11%;
+    --sidebar-primary: 215 90% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 38 92% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 20% 90%;
+    --sidebar-ring: 215 90% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.glass-morphism {
+  @apply bg-white/50 backdrop-blur-sm border border-border;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#1D4ED8] to-[#0369a1];
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-muted rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
+}
